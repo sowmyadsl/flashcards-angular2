@@ -1,28 +1,135 @@
 # Flashcards
+### Steven Galvin, Kat Gifford, jin camou, & Sowmya Dinavahi June 19th, 2017
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=plastic)](https://github.com/steven-galvin/flashcards)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+This web app was made primarily with Angular 4 and the Angular CLI, Typescript, and the Firebase Database. It's purpose is to show off our knowledge of the Javascript course from Epicodus and our efficiency with the above. Flashcards is a simple app designed to give the user the ability to see a list of subjects as well as view their specific flashcards on a dynamic page. The user can view the technical term or question and click the card to show the definition or answer. It is a great study tool for not only Epicodus students, but any aspiring software developer. Early versions of the app will focus on foundational software development terms and concepts, Ruby on Rails, Singular, Angular 4, and Javascript. Future versions will add flashcards for other languages and frameworks like PHP, C#, and React.  
 
-## Development server
+You can view the live site here {link coming soon}
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Landing Page:
+![](./src/assets/images/placeholder.png "Flashcards")
 
-## Code scaffolding
+## Planning
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+### 1. Configuration/dependencies
+  The app will primarily use Angular 4, the AngularCLI, Firebase database, and Typescript. It was made with what we learned from Epicodus' Javascript course.
+  <!-- Stretch goals include:
+    * Using Sass to style the page better.
+    * Hosting the site live -->
 
-## Build
+### 2. User Stories
+  * As a user, I'd like to visit a page to see a list of all subjects.
+  * As a user, I'd like to click a subject and see a list of flashcards associated with that subject.
+  * As a user, I'd like the option to visit an "About" page that explains what the app is, and what it does.
+  * As a user, I'd like all data persisted in a database, so it's always there when I need it.
+  * As a user, I'd like to filter the list of flashcards depending on a theme (i.e. specifically words and definition v.s. questions and concepts)
+  * As an administrator, I want to add new subjects and flashcards.
+  * As an administrator, I want to edit subjects and flashcards, in case I make a mistake, or need to update their details.
+  * As an administrator, I need the option to delete subjects and flashcards, in case it becomes deprecated or unnecessary.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### 3. Integration
+  * Root component/Index page
+  * Contact page
+  * About page
+  * List subjects page
+  * Dynamic subjects pages
+  * Admin page with CRUD functionality for flashcards
 
-## Running unit tests
+### 4. UX/UI
+  * Bootstrap
+  * Animations for better user experience
+  * Flex Box
+  * Parallax
+  * Sass
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 5. Polish
+  * Refactor code.
+  * Delete unused code.
+  * Make README awesome.
 
-## Running end-to-end tests
+## Prerequisites
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+You will need the following things properly installed on your computer.
 
-## Further help
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
+* [Typescript](https://www.typescriptlang.org/)
+* [Angular 4](https://angularjs.org/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Installation
+
+As of writing this README, these instructions work on MacOS.
+
+* Run `$ git clone <this-repository-url>`
+* Then `$ cd flashcards`
+* Once in the flashcards folder, run `$ npm install`, `$bower init`(just press enter through the prompts), `$ bower install bootstrap --save`, and `$ bower install`
+* You will need to remake the api-keys.ts file. Login to firebase and create your own project here https://firebase.google.com/
+  * Once logged in, click on 'Go To Console'.
+  * Then click 'Add project', give it a name, and select your region.
+  * Next, click 'Add Firebase to your web app'.
+  * Grab this block of code:
+```
+var config = {
+    apiKey: "xxxx",
+    authDomain: "xxxx.firebaseapp.com",
+    databaseURL: "https://xxxx.firebaseio.com",
+    projectId: "xxxx",
+    storageBucket: "",
+    messagingSenderId: "xxxx"
+  };
+```
+  * Create an `api-keys.ts` file inside the app directory and copy the block of code into it.
+  * Replace `var config` with `export var masterFirebaseConfig`
+  * To finish setting firebase up, go to firebase and and go into the database tab.
+    * Click on the button made of three dots.
+    * Select the Import JSON option.
+    * Select browse, navigate to the project folder, and open the `sample-subjects.json` file.
+    * Select Import and your database should be complete!
+
+## Running / Development
+
+Now that everything you need should be installed and setup, we can run it with angular.
+
+* Run `$ ng serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
+
+## Built With
+
+* Angular4
+* AngularCLI
+* Firebase
+* Typescript
+* HTML
+* CSS/SASS
+* Bootstrap https://getbootstrap.com/
+* ES6
+* Jquery https://jquery.com/
+* Node
+* Bower
+
+## Authors
+
+Steven Galvin, Kat Gifford, jin camou, & Sowmya Dinavahi
+
+## License
+
+MIT License
+
+Copyright (c) Steven Galvin, Kat Gifford, jin camou, & Sowmya Dinavahi, 2017
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
