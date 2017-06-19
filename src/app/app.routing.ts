@@ -17,10 +17,6 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path:'admin',
-    component:AdminComponent
-  },
-  {
     path:'terms',
     component:TermListComponent
   },

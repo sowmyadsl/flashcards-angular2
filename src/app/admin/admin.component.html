@@ -5,30 +5,22 @@
   <div class="panel-body">
     <div>
       <div>
-        <label>Term Name:</label>
-        <br>
-        <input #newName>
-      </div>
+        <input class="form-control input-lg" placeholder="NAME" #newName>
+      </div><br>
 
       <div>
-        <label>Term Definition:</label>
-        <br>
-        <input #newDefinition>
-      </div>
+        <input class="form-control input-lg" placeholder="DEFINITION" #newDefinition>
+      </div><br>
 
       <div>
-        <label>Term Category:</label>
-        <br>
-        <textarea #newCategory></textarea>
-      </div>
+        <input class="form-control input-lg" placeholder="CATEGORY" #newCategory>
+      </div><br>
 
       <div>
-        <label>Term Subject:</label>
-        <br>
-        <textarea #newSubject></textarea>
-      </div>
+        <input class="form-control input-lg" placeholder="SUBJECT" #newSubject>
+      </div><br>
 
-      <button (click)="submitForm(newName.value, newDefinition.value, newCategory.value, newSubject.value); newName.value=''; newDefinition.value=''; newCategory.value=''; newSubject.value='';">Add</button>
+      <button class="btn btn-success" (click)="submitForm(newName.value, newDefinition.value, newCategory.value, newSubject.value); newName.value=''; newDefinition.value=''; newCategory.value=''; newSubject.value='';">Add</button>
     </div>
   </div>
 </div>

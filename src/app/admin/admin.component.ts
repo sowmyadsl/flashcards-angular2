@@ -30,7 +30,7 @@ export class AdminComponent implements OnInit {
   }
 
   submitForm(name: string, definition: string, category: string, subject: string){
-    const newTerm: Term = new Term(name, definition, category, subject);
+    var newTerm: Term = new Term(name, definition, category, subject);
     this.termService.addTerm(newTerm);
   }
 }
