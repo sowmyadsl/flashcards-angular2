@@ -1,0 +1,62 @@
+{ "terms": [{
+    "name": "this",
+    "definition": "A JavaScript keyword that references the object a method is called on",
+    "category": "fundamentals",
+    "subject": "JavaScript"
+    }, {
+    "name": "Literal Notation",
+    "definition": "Creation of objects using their literal symbols, e.g. to create a string with literal notation, the quotes symbols are the literals that cause a new string to be generated; arrays use brackets and objects use curly braces",
+    "category": "fundamentals",
+    "subject": "JavaScript"
+    }, {
+    "name": "Encapsulation",
+    "definition": "In object-oriented programming languages, the concept of binding data and functions that manipulate the data together",
+    "category": "fundamentals",
+    "subject": "JavaScript"
+    }, {
+    "name": "Object",
+    "definition": "A structure for storing data that is comprised of properties and methods",
+    "category": "fundamentals",
+    "subject": "JavaScript"
+    }, {
+    "name": "Constructor",
+    "definition": "A blueprint for creating many of the same type objects. Constructors add properties.",
+    "category": "fundamentals",
+    "subject": "JavaScript"
+    }, {
+    "name": "Prototypes",
+    "definition": "Prototypes store methods to be shared by all objects of the same type. String.prototype is shared by all String objects; Dog.prototype is shared by all Dog objects. Prototypes store methods that objects of that type inherit",
+    "category": "fundamentals",
+    "subject": "JavaScript"
+    }, {
+    "name": "Instance",
+    "definition": "Objects created with a constructor are instances of the type defined by the constructor. A constructor can be used to create many instances of the same type.",
+    "category": "fundamentals",
+    "subject": "JavaScript"
+    }, {
+    "name": "BrowserSync",
+    "definition": "An npm package used to implement development servers with live reloading capabilities.",
+    "category": "dependencies",
+    "subject": "JavaScript"
+    }, {
+    "name": "AJAX",
+    "definition": "Stands for 'Asynchronous JavaScript And XML. It is a technique to make web requests without a page reload.'",
+    "category": "dependencies",
+    "subject": "JavaScript"
+    }, {
+    "name": "JSON",
+    "definition": "Stands for JavaScript Object Notation, and is basically a way of representing data that looks like JavaScript objects.",
+    "category": "databases",
+    "subject": "JavaScript"
+    }, {
+    "name": "Promises & their 3 states",
+    "definition": "An object representing an operation that hasn't been finished yet. Generally used as a manner to handle asynchronicity. A promise can force JavaScript to wait to execute some code until some event occurs, such as receiving a response from an API. A promise has three states: pending, fulfilled, and rejected. Pending is the object's initial state representing that the operation has not been finished yet. A promise is fulfilled when the operation has successfully completed - rejected means that the operation failed for some reason.",
+    "category": "fundamentals",
+    "subject": "JavaScript"
+    }, {
+    "name": "Model",
+    "definition": "Represent persistent state, and typically persist information to a web server. Models outline the attributes of objects.",
+    "category": "framework",
+    "subject": "JavaScript"
+  }]
+}
