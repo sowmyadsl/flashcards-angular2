@@ -2,6 +2,6 @@
 
 <div *ngFor="let term of terms" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{term.name}}</em></h3>
+    <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em></h3>
   </div>
 </div>
