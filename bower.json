@@ -6,7 +6,7 @@
     "Steven Galvin <steven.john.galvin@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/Steven-Galvin/flashcards",
   "ignore": [
     "**/.*",
     "node_modules",

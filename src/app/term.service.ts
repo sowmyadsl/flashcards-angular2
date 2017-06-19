@@ -1,22 +1,41 @@
 import { Injectable } from '@angular/core';
 import { Term } from './term.model';
-import { TERMS } from './mock-terms';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class TermService {
+  terms: FirebaseListObservable<any[]>;
 
-  constructor() { }
-
-  getTerms(){
-    return TERMS;
+  constructor(private database: AngularFireDatabase) {
+    this.terms = database.list('terms');
   }
 
-  getTermsById(termId: number){
-    for(var i = 0; i <= TERMS.length - 1; i++){
-      if(TERMS[i].id === termId){
-        return TERMS[i];
-      }
-    }
+  getTerms(){
+    return this.terms;
+  }
+
+  getTermById(termId: string){
+    return this.database.object('/terms/' + termId);
+  }
+
+  addTerm(newTerm: Term){
+    this.terms.push(newTerm);
+  }
+
+  updateTerm(localUpdatedTerm){
+    const termEntryInFirebase = this.getTermById(localUpdatedTerm.$key);
+    termEntryInFirebase.update(
+      {
+        name: localUpdatedTerm.name,
+        definition: localUpdatedTerm.definition,
+        category: localUpdatedTerm.category,
+        subject: localUpdatedTerm.subject
+      });
+  }
+
+  deleteTerm(localTermToDelete){
+    var termEntryInFirebase = this.getTermById(localTermToDelete.$key);
+    termEntryInFirebase.remove();
   }
 
 }
