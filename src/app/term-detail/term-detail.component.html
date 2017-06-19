@@ -1,6 +1,6 @@
-<div >
-  <h3>{{termToDisplay.name}}</h3>
-  <h3>{{termToDisplay.definition}}</h3>
-  <h4>{{termToDisplay.subject}}</h4>
-  <h4>{{termToDisplay.category}}</h4>
+<div>
+  <h3>{{(termToDisplay | async)?.name}}</h3>
+  <h3>{{(termToDisplay | async)?.definition}}</h3>
+  <h4>{{(termToDisplay | async)?.subject}}</h4>
+  <h4>{{(termToDisplay | async)?.category}}</h4>
 </div>

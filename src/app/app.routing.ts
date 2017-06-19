@@ -26,6 +26,14 @@ const appRoutes: Routes = [
   {
     path:'terms/:id',
     component: TermDetailComponent
+  },
+  {
+    path:'ruby',
+    component: TermListComponent
+  },
+  {
+    path:'javascript',
+    component: TermListComponent
   }
  ];
 
