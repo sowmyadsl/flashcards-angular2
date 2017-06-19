@@ -3,9 +3,25 @@
 <div *ngIf="showEdit">
   <input class="form-control input-lg" placeholder="NAME" [(ngModel)]="selectedTerm.name"><br>
   <input class="form-control input-lg" placeholder="DEFINTION" [(ngModel)]="selectedTerm.definition"><br>
-  <input class="form-control input-lg" placeholder="CATEGORY" [(ngModel)]="selectedTerm.category"><br>
-  <input class="form-control input-lg" placeholder="SUBJECT" [(ngModel)]="selectedTerm.subject"><br>
-
+  <select class="form-control input-lg" [(ngModel)]="selectedTerm.category">
+    <option value="Fundamentals" selected>Fundamentals</option>
+    <option value="Concepts">Concepts</option>
+    <option value="Frameworks">Frameworks</option>
+    <option value="Databases">Databases</option>
+    <option value="Dependencies">Dependencies</option>
+    <option value="Technical Interview">Technical Interview</option>
+    <option value="Other">Other</option>
+  </select>
+  <br>
+  <select class="form-control input-lg" [(ngModel)]="selectedTerm.subject">
+    <option value="Ruby" selected>Ruby</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="Rails">Rails</option>
+    <option value="Ember">Ember</option>
+    <option value="Angular">Angular</option>
+    <option value="JQuery">JQuery</option>
+  </select>
+  <br>
   <button class="btn btn-success" (click)="beginUpdateTerm(selectedTerm)">Update</button>
   <button class="btn btn-danger" (click)="beginDeletingTerm(selectedTerm)">Delete</button>
 

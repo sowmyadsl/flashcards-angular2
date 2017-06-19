@@ -48,3 +48,4 @@ export class TermListComponent implements OnInit {
   onChange(menuOption){
     this.filterByCategory = menuOption;
   }
+}

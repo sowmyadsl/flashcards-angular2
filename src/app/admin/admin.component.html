@@ -13,11 +13,26 @@
       </div><br>
 
       <div>
-        <input class="form-control input-lg" placeholder="CATEGORY" #newCategory>
+        <select class="form-control input-lg" #newCategory>
+          <option value="Fundamentals" selected>Fundamentals</option>
+          <option value="Concepts">Concepts</option>
+          <option value="Frameworks">Frameworks</option>
+          <option value="Databases">Databases</option>
+          <option value="Dependencies">Dependencies</option>
+          <option value="Technical Interview">Technical Interview</option>
+          <option value="Other">Other</option>
+        </select>
       </div><br>
 
       <div>
-        <input class="form-control input-lg" placeholder="SUBJECT" #newSubject>
+        <select class="form-control input-lg" #newSubject>
+          <option value="Ruby" selected>Ruby</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Rails">Rails</option>
+          <option value="Ember">Ember</option>
+          <option value="Angular">Angular</option>
+          <option value="JQuery">JQuery</option>
+        </select>
       </div><br>
 
       <button class="btn btn-success" (click)="submitForm(newName.value, newDefinition.value, newCategory.value, newSubject.value); newName.value=''; newDefinition.value=''; newCategory.value=''; newSubject.value='';">Add</button>
