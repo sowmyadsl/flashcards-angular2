@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { SplashPageComponent } from './splash-page/splash-page.component';
+import { TermListComponent } from './term-list/term-list.component';
+import { TermDetailComponent } from './term-detail/term-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     AdminComponent,
-    SplashPageComponent
+    SplashPageComponent,
+    TermListComponent,
+    TermDetailComponent
   ],
   imports: [
     BrowserModule,
