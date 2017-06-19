@@ -1,59 +1,309 @@
 { "terms": [{
+    "name": "IRB",
+    "definition": "The REPL(command line tool to enter code and see results) for the Ruby language; stands for Interactive RuBy.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Object",
+    "definition": "A unique instance of a class; a data representation of some thing that has properties and methods associated.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Method",
+    "definition": "A set of code instructions that do actions when called on an object of a class; similar to functions in other programming languages.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Return value",
+    "definition": "The object that is returned after the method is run. It is the response that is displayed in IRB after a method is called on an object.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "REPL",
+    "definition": "A command line tool that allows the user to enter lines of code and see the result in the terminal when executed; stands for Read-Evaluate-Print-Loop.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Class",
+    "definition": "The blueprint for an object; every object is an instance of a class. Examples of classes include String, Fixnum, Float.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Chaining Methods",
+    "definition": "Applying more than one method in a sequence. Example: 5.3.ceil().next(). The ceil() method is called first which gives a return value of 6. The next method next() is called on 6 for the final value of 7.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Instance",
+    "definition": "A unique object that represents an example of a class. 'Epicodus' is an instance of the String class.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "String",
+    "definition": "An instance of the String class; a sequence of characters between quotation marks.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Argument",
+    "definition": "Additional information that is provided to a method when it is called. We put arguments into the parentheses following a method. For example, 1.+(2).",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "String concatenation",
+    "definition": "Combining two strings together; accomplished with the concat() method or the + operator. Example: 'zig' + 'zag' returns 'zigzag'.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Array",
+    "definition": "An instance of the Array class that represents a list or collection of objects. You can mix objects of any class (String, Fixnum, Float) in an array. For example, [1, 2, 3, 'a', 'b', 'c', -1.1, -2.2, -3.3] contains all three classes.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Range",
+    "definition": "An instance of the Range class which represents intervals, such as of numbers or letters. For example, (1..10) or ('a'..'z').",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Index",
+    "definition": "The position of an element in an array indicated by an integer. The first element of every array is index 0. For example, 1 is at index 0 in this array: [1, 2, 3].",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Snake Case",
+    "definition": "A format that uses all lowercase letters and underscores to separate words. Example: thisissnake_case. Used in Ruby for naming variables.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Variable",
+    "definition": "Variables store objects and you can think of them like a box with a special label that can hold one thing at a time, but you can change whatever is inside that box.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Hash",
+    "definition": "An instance of the hash class which is an object that stores data like a dictionary - using key-value pairs for each element.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Key-Value Pairs",
+    "definition": "A format for data storage used by objects of the Hash class. Each element in a hash has a pair consisting of two objects the 'key' and the 'value'. Here is an example: numbers = { 'michael' => 5035551212, 'jessica' => 4159990000, 'chris' => 2021115599 }. 'michael', 'jessica', and 'chris' are the keys of the numbers hash. 5035551212 is the value for the key, michael. 4159990000 is the value for key, 'jessica' and 2021115599 is the value for the key, 'chris'.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Receiver",
+    "definition": "The object on which a method is called. Remember that the object receives the action of the method. Some methods permanently change the receiver and some do not. The String#upcase method does not change the receiver, but the String#upcase! method does.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Return Value",
+    "definition": "The object that is returned by the method after it has run; what we see in IRB after the method is executed.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Bang",
+    "definition": "The name of the exclamation point found at the end of Ruby methods that change the receiver when they are run. For instance, 'food'.upcase() wouldn't change the original 'food' string, but 'food'.upcase!() will.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Symbol",
+    "definition": "An instance of the Symbol class. A Symbol object is similar to a String object in that it can take some of the methods that a String can take, but Symbols are mainly used for sending information internally in programs. String is the class to use when communicating with humans and Symbol is the class to use when communicating with the computer.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Define_method",
+    "definition": "The method available on every Ruby class to create new methods. It takes the name of the new method as a symbol in the argument.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Block",
+    "definition": "A unit of code statements that are executed when a method is called; a block begins with the keyword do and ends with end.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Self",
+    "definition":"A keyword in Ruby that refers to the current object that a method has been called on; the receiver.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Parameter",
+    "definition": "Holds the value of the argument.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Loop",
+    "definition": "A way tell the computer to do something multiple times.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Each Loop",
+    "definition": "Allows us to loop through a collection of things, like an Array or a Range.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Boolean",
+    "definition": "Represents a state of being true or false. Methods like Fixnum#odd? or String#eql? are examples of methods that return booleans. These types of methods often use a ? to alert the user that a boolean will be returned.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Branching",
+    "definition": "Also commonly referred to as an if/else statement, because we begin a branch with the if keyword followed by a condition that returns a boolean and then some kind of code to run if that boolean returns true, and it also often contains an else statement so that a different set of code can run if the condition returns false.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Nil",
+    "definition": "Ruby's concept of nothingness and it is an object of the class NilClass. It is treated the same as false and won't return an error in if statements. It will return an error in other situations, however. Nil is called falsy in Ruby, as is false. Everything else is truthy.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Global Methods",
+    "definition": "Do not have receivers, and are called on the Object class.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Gem",
+    "definition": "A package of re-usable Ruby code that you can incorporate into Ruby programs or run from the command line. The gem program is used to manage gems.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Bundler",
+    "definition": "A gem dependency management tool (a gem itself!).",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Gemfile",
+    "definition": "The name of the file that Bundler looks for to install gems for a project; it should include the names (and optionally versions) of the gem dependencies for a project.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Gemfile.lock",
+    "definition": "File created by Bundler that lists the names and versions of all the gems used by a program.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Variable Scope",
+    "definition": "The context in which a variable is visible or usable in a program; for example, a variable defined in the block of a method is only visible and usable in that block; outside of the block, it does not exist. Variables need to have a scope so that they don't interfere with each other, and scope is the concept of when a variable is accessible and when it is not.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "DRY",
+    "definition": "Stands for Don't Repeat Yourself, referring to the best practice of avoiding redundant, difficult-to-maintain code. By not repeating ourselves, we won't ever change things in one place and forget to change them somewhere else.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Instance Variables",
+    "definition": "Variables defined in app.rb that are displayed in the corresponding ERB template. They need to have an @ symbol before the name and need to be placed inside of ERB tags that look like <%= %>. An example is <%= @friend %>. Further more they are assigned to every instance of a class; designated with a @ in front; for example, @month is an instance variable that every instance of MyTime will have.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Literal Notation",
+    "definition": "To create an object by typing in the literal characters that are used to identify these classes.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Unit Testing",
+    "definition": "Testing that ensures units of code work as expected; when we write Rspec tests for our methods, we are unit testing.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Integration Testing",
+    "definition": "Testing that ensures that all layers of the application are working when integrated together (user interface, server-side code, routing, etc).",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Headless Browser",
+    "definition": "A browser that does not have a graphical user interface; used by Capybara to run integration tests.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Instance",
+    "definition": "A unique object created from a class.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Upper Camel Case",
+    "definition": "Format for naming that begins with an upper case letter and capitalizes only the first letter of each word in the name; no breaks are added between words; used in names for Ruby classes; Examples: MyTime, ReallyLongClassName.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Initialize",
+    "definition": "To create an instance of a class; a method called using the .new() method on any Ruby class.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Local Variable",
+    "definition": "A variable that is scoped only to a local context but unavailable outside of that context.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
+    "name": "Class Method",
+    "definition": "A method that gets called on the class itself, rather than on an instance of that class; usually used when you want to do something that involves more than one instance or you want to create some functionality that has to do with the class itself, rather than any individual instance.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Class Variable",
+    "definition": "A variable that starts with @@ and is saved on the class itself, rather than on any particular instance of that class.",
+    "category": "fundamentals",
+    "subject": "Ruby"
+  }, {
+    "name": "Unit Testing",
+    "definition": "Specs written to test the functionality of your back-end logic. In this case, our #model, #year,#color,#engine_size, and #number_of_doors methods.",
+    "category": "concepts",
+    "subject": "Ruby"
+  }, {
     "name": "this",
     "definition": "A JavaScript keyword that references the object a method is called on",
     "category": "fundamentals",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "Literal Notation",
     "definition": "Creation of objects using their literal symbols, e.g. to create a string with literal notation, the quotes symbols are the literals that cause a new string to be generated; arrays use brackets and objects use curly braces",
     "category": "fundamentals",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "Encapsulation",
     "definition": "In object-oriented programming languages, the concept of binding data and functions that manipulate the data together",
     "category": "fundamentals",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "Object",
     "definition": "A structure for storing data that is comprised of properties and methods",
     "category": "fundamentals",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "Constructor",
     "definition": "A blueprint for creating many of the same type objects. Constructors add properties.",
     "category": "fundamentals",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "Prototypes",
     "definition": "Prototypes store methods to be shared by all objects of the same type. String.prototype is shared by all String objects; Dog.prototype is shared by all Dog objects. Prototypes store methods that objects of that type inherit",
     "category": "fundamentals",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "Instance",
     "definition": "Objects created with a constructor are instances of the type defined by the constructor. A constructor can be used to create many instances of the same type.",
     "category": "fundamentals",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "BrowserSync",
     "definition": "An npm package used to implement development servers with live reloading capabilities.",
     "category": "dependencies",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "AJAX",
     "definition": "Stands for 'Asynchronous JavaScript And XML. It is a technique to make web requests without a page reload.'",
     "category": "dependencies",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "JSON",
     "definition": "Stands for JavaScript Object Notation, and is basically a way of representing data that looks like JavaScript objects.",
     "category": "databases",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "Promises & their 3 states",
     "definition": "An object representing an operation that hasn't been finished yet. Generally used as a manner to handle asynchronicity. A promise can force JavaScript to wait to execute some code until some event occurs, such as receiving a response from an API. A promise has three states: pending, fulfilled, and rejected. Pending is the object's initial state representing that the operation has not been finished yet. A promise is fulfilled when the operation has successfully completed - rejected means that the operation failed for some reason.",
     "category": "fundamentals",
     "subject": "JavaScript"
-    }, {
+  }, {
     "name": "Model",
     "definition": "Represent persistent state, and typically persist information to a web server. Models outline the attributes of objects.",
     "category": "framework",

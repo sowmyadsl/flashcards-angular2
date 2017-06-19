@@ -27,7 +27,15 @@ const appRoutes: Routes = [
   {
     path:'admin',
     component: AuthComponent
+  },
+  {
+    path:'ruby',
+    component: TermListComponent
+  },
+  {
+    path:'javascript',
+    component: TermListComponent
   }
- ];
+];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
