@@ -1,0 +1,7 @@
+<h2>Terms</h2>
+
+<div *ngFor="let term of terms" class="panel panel-default">
+  <div class="panel-body">
+    <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em></h3>
+  </div>
+</div>
