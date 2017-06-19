@@ -14,13 +14,12 @@ export class SubjectPipe implements PipeTransform {
         return input;
       }
       else {
-        console.log(input[0].subject, condition);
+        // console.log(input[0].subject, condition);
         for(var i = 0; i < input.length; i++){
           if(input[i].subject === condition){
           output.push(input[i]);
         }
       }
-      console.log(output);
       return output;
       }
     }
