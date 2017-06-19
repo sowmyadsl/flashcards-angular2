@@ -16,6 +16,7 @@ import { SplashPageComponent } from './splash-page/splash-page.component';
 import { TermListComponent } from './term-list/term-list.component';
 import { TermDetailComponent } from './term-detail/term-detail.component';
 import { EditTermComponent } from './edit-term/edit-term.component';
+import { AuthComponent } from './auth/auth.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     SplashPageComponent,
     TermListComponent,
     TermDetailComponent,
-    EditTermComponent
+    EditTermComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
