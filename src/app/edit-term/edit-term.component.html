@@ -1,0 +1,12 @@
+<h4 (click)="showEdit = !showEdit">Edit Term</h4>
+
+<div *ngIf="showEdit">
+  <input class="form-control input-lg" placeholder="NAME" [(ngModel)]="selectedTerm.name"><br>
+  <input class="form-control input-lg" placeholder="DEFINTION" [(ngModel)]="selectedTerm.definition"><br>
+  <input class="form-control input-lg" placeholder="CATEGORY" [(ngModel)]="selectedTerm.category"><br>
+  <input class="form-control input-lg" placeholder="SUBJECT" [(ngModel)]="selectedTerm.subject"><br>
+
+  <button class="btn btn-success" (click)="beginUpdateTerm(selectedTerm)">Update</button>
+  <button class="btn btn-danger" (click)="beginDeletingTerm(selectedTerm)">Delete</button>
+
+</div>

@@ -3,7 +3,10 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Term } from '../term.model';
 import { TermService } from '../term.service';
+
+import { FirebaseObjectObservable } from 'angularfire2/database';
 import { FirebaseListObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-term-detail',
@@ -20,13 +23,14 @@ export class TermDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private termService: TermService
-    ) {}
+  ) {}
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.termId = urlParameters['id'];
     });
-    this.termToDisplay = this.termService.getTermsById(this.termId);
+    this.termService.getTermById(this.termId).subscribe(subscribedTerm => {
+      this.termToDisplay = subscribedTerm;
+    });
   }
-
 }

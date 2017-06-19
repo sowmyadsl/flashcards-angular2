@@ -5,5 +5,5 @@ export class Term {
     public definition: string,
     public category: string,
     public subject: string
-    ) {}
+  ) {}
 }

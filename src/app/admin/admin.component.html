@@ -1,3 +1,37 @@
-<p>
-  admin works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Term to Flashcards</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <input class="form-control input-lg" placeholder="NAME" #newName>
+      </div><br>
+
+      <div>
+        <input class="form-control input-lg" placeholder="DEFINITION" #newDefinition>
+      </div><br>
+
+      <div>
+        <input class="form-control input-lg" placeholder="CATEGORY" #newCategory>
+      </div><br>
+
+      <div>
+        <input class="form-control input-lg" placeholder="SUBJECT" #newSubject>
+      </div><br>
+
+      <button class="btn btn-success" (click)="submitForm(newName.value, newDefinition.value, newCategory.value, newSubject.value); newName.value=''; newDefinition.value=''; newCategory.value=''; newSubject.value='';">Add</button>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let term of terms | async" class="panel panel-default">
+  <div class="panel-body">
+    <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em>, {{term.category}}</h3>
+    <div>
+      {{term.definition}}
+      <hr>
+      <app-edit-term [selectedTerm]="term"></app-edit-term>
+    </div>
+  </div>
+</div>
