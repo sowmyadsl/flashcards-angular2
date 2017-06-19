@@ -4,6 +4,6 @@ export class Term {
     public name: string,
     public definition: string,
     public category: string,
-    public subject: string,
-    public id: number) {}
+    public subject: string
+    ) {}
 }
