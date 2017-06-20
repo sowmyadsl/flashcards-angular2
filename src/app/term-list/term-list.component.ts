@@ -50,6 +50,12 @@ export class TermListComponent implements OnInit {
     this.filterByCategory = menuOption;
   }
 
+
+  quizBySubject(){
+    this.router.navigate(['quiz' + this.currentRoute]);
+    console.log(this.currentRoute);
+  }
+
   quizMe() {
     var test = [];
     this.terms = this.db.list('/terms');
@@ -61,5 +67,6 @@ export class TermListComponent implements OnInit {
     var test2 = test[Math.floor(Math.random() * test.length)];
     var term = test2[Math.floor(Math.random() * test2.length)];
     console.log("Term: ", term.$key)
+
   }
 }

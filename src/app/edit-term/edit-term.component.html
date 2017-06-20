@@ -4,7 +4,8 @@
   <input class="form-control input-lg" placeholder="NAME" [(ngModel)]="selectedTerm.name"><br>
   <input class="form-control input-lg" placeholder="DEFINTION" [(ngModel)]="selectedTerm.definition"><br>
   <select class="form-control input-lg" [(ngModel)]="selectedTerm.category">
-    <option value="Fundamentals" selected>Fundamentals</option>
+    <option value="" disabled selected>CATEGORIES</option>
+    <option value="Fundamentals">Fundamentals</option>
     <option value="Concepts">Concepts</option>
     <option value="Frameworks">Frameworks</option>
     <option value="Databases">Databases</option>
@@ -14,7 +15,8 @@
   </select>
   <br>
   <select class="form-control input-lg" [(ngModel)]="selectedTerm.subject">
-    <option value="Ruby" selected>Ruby</option>
+    <option value="" disabled selected>SUBJECTS</option>
+    <option value="Ruby">Ruby</option>
     <option value="JavaScript">JavaScript</option>
     <option value="Rails">Rails</option>
     <option value="Ember">Ember</option>

@@ -1,6 +1,10 @@
-<div>
-  <h3>{{(termToDisplay | async)?.name}}</h3>
-  <h3>{{(termToDisplay | async)?.definition}}</h3>
-  <h4>{{(termToDisplay | async)?.subject}}</h4>
-  <h4>{{(termToDisplay | async)?.category}}</h4>
+<h4><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h4>
+
+<div class="flashcard" (click)="showCard = !showCard">
+  <!-- <div *ngIf="showCard == false"> -->
+    <h3>{{termToDisplay?.name}}</h3>
+  <!-- </div> -->
+  <div *ngIf="showCard">
+    <h3>{{termToDisplay?.definition}}</h3>
+  </div>
 </div>
