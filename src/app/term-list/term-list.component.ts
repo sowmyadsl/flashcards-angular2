@@ -50,23 +50,14 @@ export class TermListComponent implements OnInit {
     this.filterByCategory = menuOption;
   }
 
-
-  quizBySubject(){
-    this.router.navigate(['quiz' + this.currentRoute]);
-    console.log(this.currentRoute);
-  }
-
   quizMe() {
-    var test = [];
+    var firebaseArray = [];
     this.terms = this.db.list('/terms');
-    this.terms.subscribe(x => console.log('Subscriber 1: ', x));
     this.terms.subscribe(x => {
-      test.push(x);
+      firebaseArray.push(x);
     });
-    console.log("Test: ", test)
-    var test2 = test[Math.floor(Math.random() * test.length)];
-    var term = test2[Math.floor(Math.random() * test2.length)];
-    console.log("Term: ", term.$key)
-
+    var termsArray = firebaseArray[Math.floor(Math.random() * firebaseArray.length)];
+    var term = termsArray[Math.floor(Math.random() * termsArray.length)];
+    this.router.navigate(['terms/', term.$key]);
   }
 }
