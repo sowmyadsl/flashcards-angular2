@@ -7,18 +7,16 @@ import { TermService } from '../term.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
-
 @Component({
-  selector: 'app-term-list',
-  templateUrl: './term-list.component.html',
-  styleUrls: ['./term-list.component.css'],
+  selector: 'app-quiz-me',
+  templateUrl: './quiz-me.component.html',
+  styleUrls: ['./quiz-me.component.css'],
   providers: [TermService]
 })
-
-export class TermListComponent implements OnInit {
+export class QuizMeComponent implements OnInit {
   terms: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  filterByCategory: string = "allCategories";
+  // filterByCategory: string = "allCategories";
   filterBySubject: string;
   key;
 
@@ -29,7 +27,7 @@ export class TermListComponent implements OnInit {
     private location: Location
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.terms = this.termService.getTerms();
     if(this.currentRoute === '/ruby'){
       this.filterBySubject = "Ruby";
@@ -40,17 +38,4 @@ export class TermListComponent implements OnInit {
     }
   }
 
-  // click binding method
-  goToDetailPage(clickedTerm){
-    this.router.navigate(['terms', clickedTerm.$key]);
-  }
-
-  onChange(menuOption){
-    this.filterByCategory = menuOption;
-  }
-
-  quizBySubject(){
-    this.router.navigate(['quiz' + this.currentRoute]);
-    console.log(this.currentRoute);
-  }
 }

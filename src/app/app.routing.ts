@@ -6,6 +6,7 @@ import { TermListComponent } from './term-list/term-list.component';
 import { TermDetailComponent } from './term-detail/term-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './auth/auth.component';
+import { QuizMeComponent } from './quiz-me/quiz-me.component';
 
 const appRoutes: Routes = [
   {
@@ -35,6 +36,10 @@ const appRoutes: Routes = [
   {
     path:'javascript',
     component: TermListComponent
+  },
+  {
+    path:'quiz/ruby',
+    component: QuizMeComponent
   }
 ];
 
