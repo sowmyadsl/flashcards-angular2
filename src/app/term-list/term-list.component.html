@@ -1,6 +1,10 @@
 <h2>Terms List</h2>
-
-<button class="btn btn-primary outline" (click)="quizMe()">Quiz Me</button>
+<div *ngIf="currentRoute === '/Terms'">
+  <button class="btn btn-primary outline" (click)="quizMeAll()">Quiz Me All</button>
+</div>
+<div *ngIf="currentRoute != '/Terms'">
+  <button class="btn btn-primary outline" (click)="quizMe()">Quiz Me</button>
+</div>
   <h2>Filter By Category:</h2>
   <select class="form-control" (change)="onChange($event.target.value)">
     <option value="fundamentals">Fundamentals</option>
@@ -12,8 +16,17 @@
     <option value="allCategories" selected="selected">All Categories</option>
   </select>
   <br>
-<div class="flashcards">
-  <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory" class="flashcard panel panel-default">
+<div *ngIf="currentRoute != '/Terms'">
+  <div class="flashcards">
+    <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory" class="flashcard panel panel-default">
+      <div class="panel-body">
+        <h3><em>{{term.name}}</em></h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="currentRoute === '/Terms'">
+  <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory" class="panel panel-default">
     <div class="panel-body">
       <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em></h3>
     </div>

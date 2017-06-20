@@ -6,7 +6,6 @@ import { TermListComponent } from './term-list/term-list.component';
 import { TermDetailComponent } from './term-detail/term-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './auth/auth.component';
-import { QuizMeComponent } from './quiz-me/quiz-me.component';
 
 const appRoutes: Routes = [
   {
@@ -14,32 +13,32 @@ const appRoutes: Routes = [
     component: SplashPageComponent
   },
   {
-    path:'about',
+    path:'About',
     component: AboutComponent
   },
   {
-    path:'terms',
+    path:'Terms',
     component:TermListComponent
   },
   {
-    path:'terms/:id',
+    path:'Terms/:id',
     component: TermDetailComponent
   },
   {
-    path:'admin',
+    path:'Admin',
     component: AuthComponent
   },
   {
-    path:'ruby',
+    path:'Ruby',
     component: TermListComponent
   },
   {
-    path:'javascript',
+    path:'JavaScript',
     component: TermListComponent
   },
   {
-    path:'quiz/ruby',
-    component: QuizMeComponent
+    path:':subject/:id',
+    component: TermDetailComponent
   }
 ];
 

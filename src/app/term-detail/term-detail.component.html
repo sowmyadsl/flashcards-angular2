@@ -1,10 +1,11 @@
 <h4><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h4>
 
-<div class="flashcard" (click)="showCard = !showCard">
-  <!-- <div *ngIf="showCard == false"> -->
-    <h3>{{termToDisplay?.name}}</h3>
-  <!-- </div> -->
-  <div *ngIf="showCard">
-    <h3>{{termToDisplay?.definition}}</h3>
+  <div (click)="showCard = !showCard" class="flashcard">
+    <!-- <div *ngIf="showCard == false"> -->
+      <h3>{{termToDisplay?.name}}</h3>
+    <!-- </div> -->
+    <div *ngIf="showCard" class="flashcard">
+      <h3>{{termToDisplay?.definition}}</h3>
+    </div>
   </div>
-</div>
+<button class="btn btn-primary outline" (click)="quizMe()">Quiz Me</button>

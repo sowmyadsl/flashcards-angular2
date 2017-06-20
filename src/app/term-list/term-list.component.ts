@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Term } from '../term.model';
 import { TermService } from '../term.service';
-import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
-import { FirebaseObjectObservable } from 'angularfire2/database';
+import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -20,6 +18,7 @@ export class TermListComponent implements OnInit {
   currentRoute: string = this.router.url;
   filterByCategory: string = "allCategories";
   filterBySubject: string;
+  termSubject: string;
   key;
 
   constructor(
@@ -32,9 +31,10 @@ export class TermListComponent implements OnInit {
 
   ngOnInit(){
     this.terms = this.termService.getTerms();
-    if(this.currentRoute === '/ruby'){
+
+    if(this.currentRoute === '/Ruby'){
       this.filterBySubject = "Ruby";
-    } else if (this.currentRoute === '/javascript'){
+    } else if (this.currentRoute === '/Javascript'){
       this.filterBySubject = "JavaScript";
     } else {
       this.filterBySubject = "allSubjects";
@@ -43,7 +43,7 @@ export class TermListComponent implements OnInit {
 
   // click binding method
   goToDetailPage(clickedTerm){
-    this.router.navigate(['terms', clickedTerm.$key]);
+    this.router.navigate(['Terms', clickedTerm.$key]);
   }
 
   onChange(menuOption){
@@ -52,12 +52,29 @@ export class TermListComponent implements OnInit {
 
   quizMe() {
     var firebaseArray = [];
+    var output = [];
+    this.terms = this.db.list('/terms');
+    this.terms.subscribe(x => {
+      firebaseArray.push(x);
+    });
+    var termsArray = firebaseArray[Math.floor(Math.random() * firebaseArray.length)];
+    for(var i = 0; i < termsArray.length; i++) {
+      if(('/' + termsArray[i].subject) === this.currentRoute) {
+        output.push(termsArray[i]);
+      }
+    }
+    var term = output[Math.floor(Math.random() * output.length)];
+    this.router.navigate([term.subject, term.$key]);
+  }
+
+  quizMeAll() {
+    var firebaseArray = [];
     this.terms = this.db.list('/terms');
     this.terms.subscribe(x => {
       firebaseArray.push(x);
     });
     var termsArray = firebaseArray[Math.floor(Math.random() * firebaseArray.length)];
     var term = termsArray[Math.floor(Math.random() * termsArray.length)];
-    this.router.navigate(['terms/', term.$key]);
+    this.router.navigate([term.subject, term.$key]);
   }
 }
