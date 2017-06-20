@@ -19,6 +19,7 @@ export class TermDetailComponent implements OnInit {
   currentRoute: string = this.router.url;
   terms: FirebaseListObservable<any[]>;
   termId: string;
+  termSubject: string;
   termToDisplay;
   firebaseArray = [];
   term;
@@ -33,6 +34,10 @@ export class TermDetailComponent implements OnInit {
 
   ngOnInit() {
     this.terms = this.termService.getTerms();
+
+    this.route.params.forEach((urlParameters) => {
+      this.termSubject = urlParameters['subject'];
+    });
 
     this.route.params.forEach((urlParameters) => {
       this.termId = urlParameters['id'];
@@ -50,9 +55,19 @@ export class TermDetailComponent implements OnInit {
 
   quizMe() {
     var termsArray = this.firebaseArray[Math.floor(Math.random() * this.firebaseArray.length)];
-    var term = termsArray[Math.floor(Math.random() * termsArray.length)];
-    this.router.navigate(['terms/', term.$key]);
-    location.reload(true);
-  }
+    var currentRouteSubject = this.currentRoute.split(/\W/).splice(1).shift();
+    var output = [];
 
+    if (currentRouteSubject === this.termSubject) {
+      for(var i = 0; i < termsArray.length; i++){
+        if (termsArray[i].subject ===currentRouteSubject){
+          output.push(termsArray[i]);
+        }
+      }
+    }
+
+    var term = output[Math.floor(Math.random() * output.length)];
+    this.router.navigate([term.subject, term.$key]);
+    location.reload();
+  }
 }

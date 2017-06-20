@@ -13,31 +13,31 @@ const appRoutes: Routes = [
     component: SplashPageComponent
   },
   {
-    path:'about',
+    path:'About',
     component: AboutComponent
   },
   {
-    path:'terms',
+    path:'Terms',
     component:TermListComponent
   },
   {
-    path:'terms/:id',
+    path:'Terms/:id',
     component: TermDetailComponent
   },
   {
-    path:'admin',
+    path:'Admin',
     component: AuthComponent
   },
   {
-    path:'ruby',
+    path:'Ruby',
     component: TermListComponent
   },
   {
-    path:'javascript',
+    path:'JavaScript',
     component: TermListComponent
   },
   {
-    path:'ruby/:id',
+    path:':subject/:id',
     component: TermDetailComponent
   }
 ];
