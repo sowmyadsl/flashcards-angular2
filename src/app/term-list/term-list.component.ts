@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Term } from '../term.model';
 import { TermService } from '../term.service';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
@@ -26,7 +26,8 @@ export class TermListComponent implements OnInit {
     private router: Router,
     private termService: TermService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private db: AngularFireDatabase
   ) { }
 
   ngOnInit(){
@@ -49,8 +50,23 @@ export class TermListComponent implements OnInit {
     this.filterByCategory = menuOption;
   }
 
+
   quizBySubject(){
     this.router.navigate(['quiz' + this.currentRoute]);
     console.log(this.currentRoute);
+  }
+
+  quizMe() {
+    var test = [];
+    this.terms = this.db.list('/terms');
+    this.terms.subscribe(x => console.log('Subscriber 1: ', x));
+    this.terms.subscribe(x => {
+      test.push(x);
+    });
+    console.log("Test: ", test)
+    var test2 = test[Math.floor(Math.random() * test.length)];
+    var term = test2[Math.floor(Math.random() * test2.length)];
+    console.log("Term: ", term.$key)
+
   }
 }
