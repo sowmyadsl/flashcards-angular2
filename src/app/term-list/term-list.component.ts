@@ -48,4 +48,13 @@ export class TermListComponent implements OnInit {
   onChange(menuOption){
     this.filterByCategory = menuOption;
   }
+
+  quizBySubject(terms){
+    console.log(terms);
+    // let termsAr = Term[];
+    // console.log(termsAr)
+
+    // let randomTerm = Term[Math.floor(Math.random() * Term.length)];
+    // console.log(randomTerm);
+  }
 }
