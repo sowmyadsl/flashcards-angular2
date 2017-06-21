@@ -6,14 +6,15 @@
 </div>
 
 <h4><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h4>
-
-  <div (click)="showCard = !showCard" class="flashcard">
-    <!-- <div *ngIf="showCard == false"> -->
+<div class="flash-detail-parent">
+  <div (click)="showCard = !showCard" class="flash-detail">
+    <div *ngIf="showCard" class="flash-detail">
       <h3>{{termToDisplay?.name}}</h3>
-    <!-- </div> -->
-    <div *ngIf="showCard" class="flashcard">
+    </div>
+    <div *ngIf="showCard == false" class="flash-detail">
       <h3>{{termToDisplay?.definition}}</h3>
     </div>
   </div>
+</div>
 <button class="btn btn-primary outline" (click)="quizMe()">Quiz Me</button>
 
