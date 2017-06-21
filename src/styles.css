@@ -2,6 +2,75 @@
   cursor: pointer;
 }
 
+.parallax {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./assets/images/tempback.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome {
+  /*transform: translate();*/
+  color: rgba(255,255,255,0.9);
+  font-size: 150px;
+  text-shadow: 1px 1px 5px grey;
+}
+
+.content {
+  height: 99vh;
+}
+
+/*SPLASH PAGE*/
+
+.subjects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  flex-basis: 23%;
+}
+
+.splash-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 75%;
+  border: 1px solid rgba(125,126,126,0.3);
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px grey;
+}
+
+.ruby {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.ruby:hover {
+  transition: background-color 0.5s ease;
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.js {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+.js:hover {
+  transition: background-color 0.5s ease;
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+
 /*PARENT DIV CARD LIST*/
 
 .flashcards {
