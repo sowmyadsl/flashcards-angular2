@@ -96,3 +96,39 @@
 
   border-left: 60px solid #762a2a;
 }
+
+/*ABOUT PAGE*/
+
+/*.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.dev {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.dev-pic {
+  height: 250px;
+  width: 250px;
+  display: block;
+  border-radius: 25%;
+}
+
+.dev-info {
+  width: 350px;
+}

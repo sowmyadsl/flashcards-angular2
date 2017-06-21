@@ -39,5 +39,3 @@ export class SearchPipe implements PipeTransform {
     }
   }
 }
-
-hi(){}
