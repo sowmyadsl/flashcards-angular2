@@ -1,0 +1,6 @@
+<div  class="clickable" (click)="showCard = !showCard">
+  <h3>{{selectedTerm.name}}</h3>
+  <div *ngIf="showCard">
+    <h3>{{selectedTerm.definition}}</h3>
+  </div>
+</div>

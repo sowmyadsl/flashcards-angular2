@@ -21,6 +21,7 @@ export class TermListComponent implements OnInit {
   filterByWords: any[];
   termSubject: string;
   key;
+  showCard = false;
 
   constructor(
     private router: Router,

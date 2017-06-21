@@ -23,7 +23,6 @@ export class TermDetailComponent implements OnInit {
   termToDisplay;
   firebaseArray = [];
   term;
-  showCard = true;
 
   constructor(
     private router: Router,
