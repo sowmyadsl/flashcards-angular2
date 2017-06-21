@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/*PARENT DIV*/
+.flashcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*CHILD DIVS*/
+.flashcard {
+  flex-basis: 23%;
+  min-height: 250px;
+  min-width: 350px;
+  display: flex;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+}

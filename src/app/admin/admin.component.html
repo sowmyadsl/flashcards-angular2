@@ -14,7 +14,8 @@
 
       <div>
         <select class="form-control input-lg" #newCategory>
-          <option value="Fundamentals" selected>Fundamentals</option>
+          <option value="" disabled selected>CATEGORIES</option>
+          <option value="Fundamentals">Fundamentals</option>
           <option value="Concepts">Concepts</option>
           <option value="Frameworks">Frameworks</option>
           <option value="Databases">Databases</option>
@@ -26,7 +27,8 @@
 
       <div>
         <select class="form-control input-lg" #newSubject>
-          <option value="Ruby" selected>Ruby</option>
+          <option value="" disabled selected>SUBJECTS</option>
+          <option value="Ruby">Ruby</option>
           <option value="JavaScript">JavaScript</option>
           <option value="Rails">Rails</option>
           <option value="Ember">Ember</option>
@@ -39,14 +41,15 @@
     </div>
   </div>
 </div>
-
-<div *ngFor="let term of terms | async" class="panel panel-default">
-  <div class="panel-body">
-    <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em>, {{term.category}}</h3>
-    <div>
-      {{term.definition}}
-      <hr>
-      <app-edit-term [selectedTerm]="term"></app-edit-term>
+<div class="flashcards">
+  <div *ngFor="let term of terms | async" class="flashcard panel panel-default">
+    <div class="panel-body">
+      <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em>, {{term.category}}</h3>
+      <div>
+        {{term.definition}}
+        <hr>
+        <app-edit-term [selectedTerm]="term"></app-edit-term>
+      </div>
     </div>
   </div>
 </div>
