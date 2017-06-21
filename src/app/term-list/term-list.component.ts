@@ -18,6 +18,7 @@ export class TermListComponent implements OnInit {
   currentRoute: string = this.router.url;
   filterByCategory: string = "allCategories";
   filterBySubject: string;
+  filterByWords: any[];
   termSubject: string;
   key;
 
@@ -77,4 +78,11 @@ export class TermListComponent implements OnInit {
     var term = termsArray[Math.floor(Math.random() * termsArray.length)];
     this.router.navigate([term.subject, term.$key]);
   }
+
+  searchByTerm(searchString){
+    var searchWords = searchString.split(' ');
+    console.log(searchWords);
+    this.filterByWords = searchWords;
+  }
+
 }
