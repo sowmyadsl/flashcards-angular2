@@ -1,4 +1,9 @@
-/*PARENT DIV*/
+.clickable {
+  cursor: pointer;
+}
+
+/*PARENT DIV CARD LIST*/
+
 .flashcards {
   display: flex;
   flex-wrap: wrap;
@@ -6,8 +11,8 @@
   align-items: center;
 }
 
+/*CHILD DIV CARD LIST*/
 
-/*CHILD DIVS*/
 .flashcard {
   flex-basis: 23%;
   min-height: 250px;
@@ -18,6 +23,8 @@
   align-items: center;
 }
 
+/*PARENT DIV CARD DETAIL*/
+
 .flash-detail-parent {
   display: flex;
   flex-wrap: wrap;
@@ -25,13 +32,67 @@
   align-items: center;
 }
 
+/*CHILD DIV CARD DETAIL*/
+
 .flash-detail {
-  border: 1px solid black;
+  padding: 20px;
+  border: 1px solid rgba(125,126,126,0.5);
+  border-radius: 1em;
+  box-shadow: 1px 1px 10px grey;
   flex-basis: 23%;
-  min-height: 250px;
-  min-width: 350px;
+  max-height: 450px;
+  min-height: 450px;
+  max-width: 300px;
+  min-width: 300px;
   display: flex;
   margin: 8px;
   justify-content: center;
   align-items: center;
+}
+
+.flash-detail:hover {
+  transition: background-color 0.3s ease,
+              box-shadow 0.3s ease;
+  background-color: #F7F9F9;
+  box-shadow: 1px 1px 5px black;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+
+  border-right: 50px solid #548587;
+}
+
+.arrow-left:hover {
+  transition: border-top 0.2s ease,
+              border-bottom 0.2s ease,
+              border-right 0.2s ease;
+
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+
+  border-right: 60px solid #2a6769;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+
+  border-left: 50px solid #915454;
+}
+
+.arrow-right:hover {
+  transition: border-top 0.2s ease,
+              border-bottom 0.2s ease,
+              border-right 0.2s ease;
+
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+
+  border-left: 60px solid #762a2a;
 }
