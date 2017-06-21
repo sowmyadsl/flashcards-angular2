@@ -20,7 +20,7 @@ import { EditTermComponent } from './edit-term/edit-term.component';
 import { AuthComponent } from './auth/auth.component';
 import { CategoryPipe } from './category.pipe';
 import { SubjectPipe } from './subject.pipe';
-import { QuizMeComponent } from './quiz-me/quiz-me.component';
+import { SearchPipe } from './search.pipe';
 
 
 export const firebaseConfig = {
@@ -42,7 +42,7 @@ export const firebaseConfig = {
     AuthComponent,
     CategoryPipe,
     SubjectPipe,
-    QuizMeComponent
+    SearchPipe
   ],
   imports: [
     BrowserModule,

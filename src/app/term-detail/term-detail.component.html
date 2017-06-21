@@ -1,3 +1,10 @@
+<div>
+  <h3>{{termToDisplay ?.name}}</h3>
+  <h3>{{termToDisplay ?.definition}}</h3>
+  <h4>{{termToDisplay ?.subject}}</h4>
+  <h4>{{termToDisplay ?.category}}</h4>
+</div>
+
 <h4><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h4>
 
   <div (click)="showCard = !showCard" class="flashcard">
@@ -9,3 +16,4 @@
     </div>
   </div>
 <button class="btn btn-primary outline" (click)="quizMe()">Quiz Me</button>
+
