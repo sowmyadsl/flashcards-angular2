@@ -19,7 +19,7 @@ export class SearchPipe implements PipeTransform {
           //For that, we need to spin through each of the search words to see if the subject of the current element of Terms contains the search word.
           for(var j = 0; j < searchWords.length; j++){
             //Check if the search word could be found in the definition property of current element.
-            if(input[i].definition.includes(searchWords[j])){
+            if(input[i].name.toLowerCase().includes(searchWords[j])){
               //Yes. search word is present in the input subject. So Push it to output.
               output.push(input[i]);
               // Once a match is found, we need not look through search words to see if others match.

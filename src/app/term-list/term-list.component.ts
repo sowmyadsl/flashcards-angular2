@@ -80,7 +80,7 @@ export class TermListComponent implements OnInit {
   }
 
   searchByTerm(searchString){
-    var searchWords = searchString.split(' ');
+    var searchWords = searchString.toLowerCase().split(' ');
     console.log(searchWords);
     this.filterByWords = searchWords;
   }

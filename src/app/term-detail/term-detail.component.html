@@ -1,13 +1,47 @@
-<h4><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h4>
-<div class="flash-detail-parent">
+  <!-- <label class="border card effect__check clickable" for="one">
+    <input type="checkbox" id="one"/>
+    <span class="border child">
+      <span class="border card__front flash-detail">
+        <span class="border card__text"><h3>{{termToDisplay?.name}}</h3></span>
+      </span>
+      <span class="border card__back flash-detail">
+        <span class="border card__text"><h3>{{termToDisplay?.definition}}</h3></span>
+      </span>
+    </span>
+  </label> -->
+
+  <!-- <div class="row">
+    <div class="col-sm-2">
+      <div class="arrow-left clickable" (click)="goBack()"></div>
+    </div>
+    <div class="col-sm-8">
+      <div class="flash-detail-parent">
+        <section class="container">
+          <div id="flip">
+            <div id="card">
+              <figure class="front flash-detail"><h3>{{termToDisplay?.name}}</h3></figure>
+              <figure class="back flash-detail"><h3>{{termToDisplay?.definition}}</h3></figure>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="arrow-right clickable" (click)="quizMe()"></div>
+    </div>
+  </div> -->
+<div class="arrow-flex">
   <div class="arrow-left clickable" (click)="goBack()"></div>
-  <div (click)="showCard = !showCard" class="clickable">
-    <div *ngIf="showCard" class="flash-detail">
-      <h3>{{termToDisplay?.name}}</h3>
-    </div>
-    <div *ngIf="showCard == false" class="flash-detail">
-      <h3>{{termToDisplay?.definition}}</h3>
-    </div>
-  </div>
+  <h2><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h2>
   <div class="arrow-right clickable" (click)="quizMe()"></div>
+</div>
+<div class="flash-detail-parent">
+  <section class="detail-container">
+    <div class="clickable" id="flip">
+      <div id="card">
+        <figure class="front flash-detail"><h3>{{termToDisplay?.name}}</h3></figure>
+        <figure class="back flash-detail"><h3>{{termToDisplay?.definition}}</h3></figure>
+      </div>
+    </div>
+  </section>
 </div>

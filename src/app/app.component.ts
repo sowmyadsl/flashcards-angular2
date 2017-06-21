@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, AfterViewInit } from '@angular/core';
+declare var $:any;
 
 
 @Component({

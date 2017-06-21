@@ -22,7 +22,7 @@
           "styles.css",
           "../bower_components/bootstrap/dist/css/bootstrap.css"
       ],
-      "scripts": [],
+      "scripts": ["../bower_components/jquery/dist/jquery.min.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
