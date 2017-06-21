@@ -22,7 +22,6 @@ import { CategoryPipe } from './category.pipe';
 import { SubjectPipe } from './subject.pipe';
 import { SearchPipe } from './search.pipe';
 
-
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
