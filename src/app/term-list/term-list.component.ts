@@ -20,6 +20,7 @@ export class TermListComponent implements OnInit {
   currentRoute: string = this.router.url;
   filterByCategory: string = "allCategories";
   filterBySubject: string;
+  filterByWords: any[];
   key;
 
   constructor(
@@ -62,4 +63,11 @@ export class TermListComponent implements OnInit {
     var term = test2[Math.floor(Math.random() * test2.length)];
     console.log("Term: ", term.$key)
   }
+
+  searchByTerm(searchString){
+    var searchWords = searchString.split(' ');
+    console.log(searchWords);
+    this.filterByWords = searchWords;
+  }
+
 }

@@ -11,7 +11,13 @@
     <option value="allCategories" selected="selected">All Categories</option>
   </select>
   <br>
-  <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory" class="panel panel-default">
+
+  <div class="search-box">
+    <input type="text" name="search" placeholder="search by keywords" #Searchstring>
+    <button (click)="searchByTerm(Searchstring.value)">Search</button>
+  </div>
+  <br>
+  <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords " class="panel panel-default">
     <div class="panel-body">
       <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em></h3>
     </div>
