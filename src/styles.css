@@ -40,10 +40,10 @@
   border-radius: 1em;
   box-shadow: 1px 1px 10px grey;
   flex-basis: 23%;
-  max-height: 450px;
-  min-height: 450px;
-  max-width: 300px;
-  min-width: 300px;
+  max-height: 600px;
+  min-height: 600px;
+  max-width: 400px;
+  min-width: 400px;
   display: flex;
   margin: 8px;
   justify-content: center;
@@ -58,6 +58,7 @@
 }
 
 .arrow-left {
+  margin: 0px 20px 0px 0px;
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
@@ -78,6 +79,7 @@
 }
 
 .arrow-right {
+  margin: 0px 0px 0px 20px;
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
