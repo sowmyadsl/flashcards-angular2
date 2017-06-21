@@ -54,6 +54,10 @@ export class TermDetailComponent implements OnInit {
     });
   }
 
+  goBack() {
+    this.router.navigate([this.termSubject]);
+  }
+
   quizMe() {
     var termsArray = this.firebaseArray[Math.floor(Math.random() * this.firebaseArray.length)];
     var currentRouteSubject = this.currentRoute.split(/\W/).splice(1).shift();

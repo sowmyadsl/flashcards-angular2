@@ -1,6 +1,7 @@
 <h4><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h4>
 <div class="flash-detail-parent">
-  <div (click)="showCard = !showCard" class="flash-detail">
+  <div class="arrow-left clickable" (click)="goBack()"></div>
+  <div (click)="showCard = !showCard" class="clickable">
     <div *ngIf="showCard" class="flash-detail">
       <h3>{{termToDisplay?.name}}</h3>
     </div>
@@ -8,5 +9,5 @@
       <h3>{{termToDisplay?.definition}}</h3>
     </div>
   </div>
+  <div class="arrow-right clickable" (click)="quizMe()"></div>
 </div>
-<button class="btn btn-primary outline" (click)="quizMe()">Quiz Me</button>
