@@ -109,7 +109,7 @@ Now that everything you need should be installed and setup, we can run it with a
 
 ## Authors
 
-Steven Galvin, Kat Gifford, jin camou, & Sowmya Dinavahi
+Steven Galvin, Kat Gifford, Jin Camou, & Sowmya Dinavahi
 
 ## License
 
