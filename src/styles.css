@@ -17,3 +17,21 @@
   justify-content: center;
   align-items: center;
 }
+
+.flash-detail-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flash-detail {
+  border: 1px solid black;
+  flex-basis: 23%;
+  min-height: 250px;
+  min-width: 350px;
+  display: flex;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+}

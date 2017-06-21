@@ -20,8 +20,6 @@ import { EditTermComponent } from './edit-term/edit-term.component';
 import { AuthComponent } from './auth/auth.component';
 import { CategoryPipe } from './category.pipe';
 import { SubjectPipe } from './subject.pipe';
-import { QuizMeComponent } from './quiz-me/quiz-me.component';
-
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,8 +39,7 @@ export const firebaseConfig = {
     EditTermComponent,
     AuthComponent,
     CategoryPipe,
-    SubjectPipe,
-    QuizMeComponent
+    SubjectPipe
   ],
   imports: [
     BrowserModule,
