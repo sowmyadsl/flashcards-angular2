@@ -28,7 +28,7 @@ h1 {
 .btn-cust:hover {
   background: #FFF7F7;
   color:#3DACDD;
-  font-style: oblique;
+  font-style: oblique !important;
 }
 .btn-no-bg:hover {
   color:#3DACDD;
@@ -195,93 +195,4 @@ h1 {
   margin: 8px;
   justify-content: center;
   align-items: center;
-}
-
-/*ABOUT PAGE*/
-.child {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.dev {
-  width: 500px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-}
-
-.dev-pic {
-  height: 200px;
-  width: 200px;
-  display: block;
-  border-top-left-radius: 20%;
-  border-bottom-left-radius: 20%;
-}
-
-.dev-info {
-  width: 300px;
-  height: 200px;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid gray;
-  border-left: none;
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
-  margin-left: -1px;
-}
-
-.social {
-  width: 100%;
-  float: right;
-}
-
-.social a {
-  float: right;
-  line-height: 40px;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-
-.social a:hover {
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-
-.github {
-  background-color: #3D5B94;
-  font-size: 1.2em;
-  width: 33.33%;
-  border-bottom-right-radius: 17%;
-}
-
-.twit, .linkden {
-  background-color: #3DACDD;
-  font-size: 1.2em;
-  width: 33.33%;
-}
-
-.insta{
-  background-color: #cd486b;
-  font-size: 1.2em;
-  width: 33.33%;
-}
-
-.about-project {
-  margin: 30px;
-  text-align: center;
 }
