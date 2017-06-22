@@ -2,7 +2,6 @@
 
 ### Steven Galvin, Kat Gifford, Jin Camou, & Sowmya Dinavahi June 19th, 2017
 
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=plastic)](https://github.com/steven-galvin/flashcards)
 [![npm version](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://badge.fury.io/js/%40angular%2Fcore)
 
 
