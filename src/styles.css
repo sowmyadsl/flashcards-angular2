@@ -21,7 +21,7 @@ h1 {
 }
 
 .btn-cust {
-  background: #FFF7F7;
+  background: #edf5f9;
   border: none;
   color: #3D5B94;
   font-size: 20px;
@@ -35,7 +35,7 @@ h1 {
 }
 
 .btn-cust:hover {
-  background: #FFF7F7;
+  background: #edf5f9;
   color:#3DACDD;
   font-style: oblique !important;
 }
@@ -179,4 +179,27 @@ h1 {
 
 .rails:hover {
   transform: rotate(5deg) scale(1.2);
+}
+
+
+/*PARENT DIV CARD LIST*/
+
+.flashcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*CHILD DIV CARD LIST*/
+
+.flashcard {
+  padding: 20px;
+  flex-basis: 23%;
+  min-height: 250px;
+  min-width: 350px;
+  display: flex;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
 }
