@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TermService } from '../term.service';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-edit-term',
@@ -10,8 +12,16 @@ import { TermService } from '../term.service';
 
 export class EditTermComponent implements OnInit {
   @Input() selectedTerm;
+  @Input() user;
+  uid: string;
+  currentRoute: string = this.router.url;
 
-  constructor(private termService: TermService) { }
+  constructor(
+    private termService: TermService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private location: Location
+  ) { }
 
   ngOnInit() {
   }

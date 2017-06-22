@@ -29,6 +29,10 @@ const appRoutes: Routes = [
     component: AuthComponent
   },
   {
+    path:'Edit',
+    component: AuthComponent
+  },
+  {
     path:'Ruby',
     component: TermListComponent
   },

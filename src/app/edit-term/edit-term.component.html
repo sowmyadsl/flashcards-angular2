@@ -25,6 +25,7 @@
   </select>
   <br>
   <button class="btn btn-success" (click)="beginUpdateTerm(selectedTerm)">Update</button>
-  <button class="btn btn-danger" (click)="beginDeletingTerm(selectedTerm)">Delete</button>
+  <!-- <button *ngIf="authService.user.uid === 'xd02DFvuPWY7IAgtxEcLWTl8BE32' || user.uid === 'NRRlYhwo7Je9hCnTZaNO5xPDYpC3' || user.uid === 'S5ZntJd7rJQQDzusrTDEgODwj8R2' || user.uid === 'D9POG4oCf3hdQafocjw0bcEWCqv1'" class="btn btn-danger" (click)="beginDeletingTerm(selectedTerm)">Delete</button> -->
+  <button *ngIf="currentRoute === '/Admin'" class="btn btn-danger" (click)="beginDeletingTerm(selectedTerm)">Delete</button>
 
 </div>

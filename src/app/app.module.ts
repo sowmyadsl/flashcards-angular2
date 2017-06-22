@@ -8,6 +8,8 @@ import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -21,7 +23,9 @@ import { AuthComponent } from './auth/auth.component';
 import { CategoryPipe } from './category.pipe';
 import { SubjectPipe } from './subject.pipe';
 import { SearchPipe } from './search.pipe';
+import { AuthService } from './auth.service';
 import { TermPanelComponent } from './term-panel/term-panel.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,6 +33,7 @@ export const firebaseConfig = {
   databaseURL: masterFirebaseConfig.databaseURL,
   storageBucket: masterFirebaseConfig.storageBucket
 };
+
 
 @NgModule({
   declarations: [
@@ -51,9 +56,10 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
