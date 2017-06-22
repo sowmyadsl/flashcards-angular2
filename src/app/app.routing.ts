@@ -37,6 +37,22 @@ const appRoutes: Routes = [
     component: TermListComponent
   },
   {
+    path:'Ember',
+    component: TermListComponent
+  },
+  {
+    path:'Angular',
+    component: TermListComponent
+  },
+  {
+    path:'Rails',
+    component: TermListComponent
+  },
+  {
+    path:'JQuery',
+    component: TermListComponent
+  },
+  {
     path:':subject/:id',
     component: TermDetailComponent
   }

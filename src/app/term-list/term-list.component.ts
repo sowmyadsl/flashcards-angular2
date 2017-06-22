@@ -16,7 +16,7 @@ import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable }
 export class TermListComponent implements OnInit {
   terms: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  filterByCategory: string = "allCategories";
+  filterByCategory: string;
   filterBySubject: string;
   filterByWords: any[];
   termSubject: string;

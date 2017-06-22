@@ -7,13 +7,13 @@
 </div>
 <h2>Filter By Category:</h2>
 <select class="form-control" (change)="onChange($event.target.value)">
+  <option value="" disabled selected>Choose Category</option>
   <option value="fundamentals">Fundamentals</option>
   <option value="concepts">Concepts</option>
   <option value="framework">Frameworks</option>
   <option value="databases">Databases</option>F
   <option value="dependencies">Dependencies</option>
   <option value="technicalInterview">Technical Interview</option>
-  <option value="allCategories" selected="selected">All Categories</option>
 </select>
 <br>
 

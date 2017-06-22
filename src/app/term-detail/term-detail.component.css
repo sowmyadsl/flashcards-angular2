@@ -37,6 +37,7 @@
 }
 
 .arrow-flex {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,19 +49,13 @@
   height: 0;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-
-  border-right: 50px solid #548587;
+  border-right: 50px solid #03446a;
+  transition: all .2s ease-in-out;
 }
 
 .arrow-left:hover {
-  transition: border-top 0.2s ease,
-              border-bottom 0.2s ease,
-              border-right 0.2s ease;
-
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-
-  border-right: 60px solid #2a6769;
+  transform: scale(1.2);
+  border-right-color: #915454;
 }
 
 .arrow-right {
@@ -69,19 +64,13 @@
   height: 0;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-
-  border-left: 50px solid #915454;
+  border-left: 50px solid #03446a;
+  transition: all .2s ease-in-out;
 }
 
 .arrow-right:hover {
-  transition: border-top 0.2s ease,
-              border-bottom 0.2s ease,
-              border-right 0.2s ease;
-
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-
-  border-left: 60px solid #762a2a;
+  transform: scale(1.2);
+  border-left-color: #548587;
 }
 
 .detail-container {

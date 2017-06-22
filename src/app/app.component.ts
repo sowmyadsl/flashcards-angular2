@@ -8,5 +8,5 @@ declare var $:any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Flashcards - app component';
+  title = 'Epiquiz';
 }
