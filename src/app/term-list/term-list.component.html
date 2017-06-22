@@ -1,12 +1,12 @@
 <div class="filter-box">
   <select class="form-control" (change)="onChange($event.target.value)">
     <option value="" disabled selected>Filter By Category</option>
-    <option value="fundamentals">Fundamentals</option>
-    <option value="concepts">Concepts</option>
-    <option value="framework">Frameworks</option>
-    <option value="databases">Databases</option>F
-    <option value="dependencies">Dependencies</option>
-    <option value="technicalInterview">Technical Interview</option>
+    <option value="fundamentals">Fundamentals - Most Results</option>
+    <option value="concepts">Concepts - Most Results</option>
+    <option value="framework">Frameworks - WIP</option>
+    <option value="databases">Databases - WIP</option>F
+    <option value="dependencies">Dependencies - WIP</option>
+    <option value="technicalInterview">Technical Interview - WIP</option>
   </select>
   <div class="search-box">
     <input class="form-control" type="text" name="search" placeholder="Search by keywords" #Searchstring>
@@ -18,6 +18,10 @@
   <div class="term-button" *ngIf="currentRoute != '/Terms'">
     <button class="btn btn-quiz-me" (click)="quizMe()">Give Me a Random Card</button>
   </div>
+</div>
+
+<div class="about-term">
+  <h4>To get started, select a category from the list above. You can further filter your search by searching for key words. If you want a more traditional flashcard experience, click the button to generate a random card above.</h4>
 </div>
 
 <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords">

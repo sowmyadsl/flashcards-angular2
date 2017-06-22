@@ -44,6 +44,10 @@
 }
 
 .arrow-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0);
   margin: 0px 20px 0px 0px;
   width: 0;
   height: 0;
@@ -54,11 +58,24 @@
 }
 
 .arrow-left:hover {
+  color: #03446a;
   transform: scale(1.2);
   border-right-color: #915454;
 }
 
+.arrow-left .return-home {
+  transition: all .3s ease-in-out;
+}
+
+.arrow-left:hover .return-home {
+  background-color: rgba(237,245,249,0.8);
+}
+
 .arrow-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0);
   margin: 0px 0px 0px 60px;
   width: 0;
   height: 0;
@@ -69,9 +86,19 @@
 }
 
 .arrow-right:hover {
+  color: #03446a;
   transform: scale(1.2);
   border-left-color: #548587;
 }
+
+.arrow-right .next-card {
+  transition: all .3s ease-in-out;
+}
+
+.arrow-right:hover .next-card {
+  background-color: rgba(237,245,249,0.8);
+}
+
 
 .detail-container {
   position: relative;

@@ -14,7 +14,7 @@ export class CategoryPipe implements PipeTransform {
     }
     else {
       for(var i = 0; i < input.length; i++){
-        if(input[i].category === content){
+        if(input[i].category.toLowerCase() === content.toLowerCase()){
         output.push(input[i]);
       }
     }
