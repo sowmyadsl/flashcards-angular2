@@ -15,9 +15,10 @@ You can view the live site here {link coming soon}
 ## About Page:
 ![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/about.png)
 
+
 ## Terms Page:
-![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/search.png)
 ![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/flashcards.png)
+
 
 ## Random Flashcard Page:
 ![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/flashcard1.png)
