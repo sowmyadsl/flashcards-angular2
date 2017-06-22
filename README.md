@@ -12,12 +12,16 @@ You can view the live site here {link coming soon}
 ## Landing Page:
 ![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/main.png)
 
-## Terms Page:
-![screenshot](src/assets/public/images/epiquiz1.png)
-
 ## About Page:
-![screenshot](src/assets/public/images/epiquiz3.png)
+![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/about.png)
 
+## Terms Page:
+![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/search.png)
+![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/flashcards.png)
+
+## Random Flashcard Page:
+![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/flashcard1.png)
+![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/flashcard2.png)
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
