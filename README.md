@@ -11,8 +11,13 @@ This web app was made primarily with Angular 4 and the Angular CLI, Typescript, 
 You can view the live site here {link coming soon}
 
 ## Landing Page:
-![](./src/assets/images/temp.png "Flashcards")
+![screenshot](src/assets/public/images/epiquiz.png)
 
+## Terms Page:
+![screenshot](src/assets/public/images/epiquiz1.png)
+
+## About Page:
+![screenshot](src/assets/public/images/epiquiz3.png)
 
 ## Prerequisites
 
