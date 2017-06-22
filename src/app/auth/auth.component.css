@@ -12,11 +12,16 @@
 
 .form-control {
   margin-bottom: 10px;
+  margin-left: 3px;
 }
 
 .loggin-in {
   display: flex;
+  background-color: rgba(3,68,106,0.07);
+  border: 1px solid rgba(3,68,106,0.1);
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  padding: 10px 5px 3px 5px;
+  border-radius: 8px;
+  margin: 3%;
 }
