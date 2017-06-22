@@ -1,9 +1,7 @@
-<h3>Admin login</h3>
 <br>
 
-<div id="login" class="col-md-5" >
-  <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
-
+<div id="login">
+  <h3 class="list-inline" *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!  </h3>
   <div *ngIf="!(authService.user | async)">
     <input type="text" [(ngModel)]="email" placeholder="email">
     <input type="password" [(ngModel)]="password" placeholder="password">
@@ -17,9 +15,13 @@
     </button>
   </div>
 
-  <button (click)="logout()" *ngIf="authService.user | async">
+  <button class="btn btn-default list-inline space-left" (click)="logout()" *ngIf="authService.user | async">
     Logout
   </button>
 </div>
 
-<app-admin *ngIf="authService.user | async"></app-admin>
+<br>
+
+<div class="edit-component-route">
+  <app-admin *ngIf="authService.user | async"></app-admin>
+</div>
