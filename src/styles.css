@@ -11,6 +11,30 @@ h1 {
   text-shadow: 5px 4px 7px black;
 }
 
+.btn-cust {
+  background: #FFF7F7;
+  border: none;
+  color: #3D5B94;
+  font-size: 20px;
+}
+
+.btn-no-bg {
+  background-color: white;
+  border: none;
+  color: #3D5B94;
+  font-size: 20px;
+}
+
+.btn-cust:hover {
+  background: #FFF7F7;
+  color:#3DACDD;
+  font-style: oblique;
+}
+.btn-no-bg:hover {
+  color:#3DACDD;
+  font-style: oblique;
+}
+
 .card-name  {
   text-align: center;
   transition: all .4s ease-in-out;
@@ -25,6 +49,7 @@ h1 {
   border: none;
   background-color: #FFF7Fe;
 }
+
 
 .clickable {
   cursor: pointer;

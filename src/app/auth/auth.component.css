@@ -1,13 +1,9 @@
-/*.edit-component-route {
-  padding-top: 20px;
-}*/
-
 #login {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .list-inline {
-  display: inline-block
+  display: inline-block;
 }
 .space-left {
   margin-left: 3px;

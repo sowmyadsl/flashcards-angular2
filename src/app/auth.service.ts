@@ -17,7 +17,7 @@ export class AuthService {
       .auth
       .createUserWithEmailAndPassword(email, password)
       .then(value => {
-        alert('Success!'+ value);
+        // alert('Success!'+ value);
       })
       .catch(err => {
         alert('Something went wrong: ' + err.message);
@@ -29,7 +29,7 @@ export class AuthService {
       .auth
       .signInWithEmailAndPassword(email, password)
       .then(value => {
-        alert('LogIn Success!');
+        // alert('LogIn Success!');
       })
       .catch(err => {
         alert('Something went wrong: ' + err.message);

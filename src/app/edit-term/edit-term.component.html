@@ -1,4 +1,4 @@
-<h4 class="clickable" (click)="showEdit = !showEdit">Edit Term</h4>
+<h4 class="clickable btn-no-bg" (click)="showEdit = !showEdit">Edit Term</h4>
 
 <div *ngIf="showEdit">
   <input class="form-control input-lg" placeholder="NAME" [(ngModel)]="selectedTerm.name"><br>
