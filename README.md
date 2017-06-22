@@ -10,7 +10,7 @@ This web app was made primarily with Angular 4 and the Angular CLI, Typescript, 
 You can view the live site here {link coming soon}
 
 ## Landing Page:
-![screenshot](src/assets/public/images/epiquiz.png)
+![screenshot](https://github.com/Steven-Galvin/flashcards/blob/master/src/assets/main.png)
 
 ## Terms Page:
 ![screenshot](src/assets/public/images/epiquiz1.png)
