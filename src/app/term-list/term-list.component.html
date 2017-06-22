@@ -22,6 +22,8 @@
     <button (click)="searchByTerm(Searchstring.value)">Search</button>
   </div>
   <br>
+
+
   <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords " class="panel panel-default">
 <div *ngIf="currentRoute != '/Terms'">
   <div class="flashcards">
@@ -32,8 +34,9 @@
     </div>
   </div>
 </div>
+
 <div *ngIf="currentRoute === '/Terms'">
-  <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory" class="panel panel-default">
+  <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords" class="panel panel-default">
     <div class="panel-body">
       <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em></h3>
     </div>

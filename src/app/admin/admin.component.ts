@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Term } from '../term.model';
@@ -14,6 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 
 export class AdminComponent implements OnInit {
+  @Input() user;
   terms: FirebaseListObservable<any[]>;
   termName: string;
   currentRoute: string = this.router.url;

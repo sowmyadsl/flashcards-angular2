@@ -10,6 +10,8 @@ import { TermService } from '../term.service';
 
 export class EditTermComponent implements OnInit {
   @Input() selectedTerm;
+  @Input() user;
+  uid: string;
 
   constructor(private termService: TermService) { }
 

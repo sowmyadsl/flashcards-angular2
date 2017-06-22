@@ -6,6 +6,8 @@ import { TermListComponent } from './term-list/term-list.component';
 import { TermDetailComponent } from './term-detail/term-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './auth/auth.component';
+import { GuestComponent } from './guest/guest.component';
+import { GuestAuthComponent } from './guest-auth/guest-auth.component';
 
 const appRoutes: Routes = [
   {
