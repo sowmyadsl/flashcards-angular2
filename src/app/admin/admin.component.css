@@ -1,0 +1,13 @@
+.panel-new {
+  background-color: #FFF7F7;
+}
+
+.panel-new .panel-title {
+  border: none;
+  background-color: #FFF7F7;
+}
+
+.flashcard .panel-body {
+  border: none;
+  border-radius: 20%;
+}

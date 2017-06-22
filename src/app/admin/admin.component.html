@@ -1,6 +1,6 @@
-<div class="panel panel-default">
+<div class="panel-new">
   <div class="panel-heading">
-    <h3 class="panel-title">Add New Term to Flashcards</h3>
+    <h2 class="panel-title"><strong>Add New Term to Flashcards</strong></h2>
   </div>
   <div class="panel-body">
     <div>
@@ -37,12 +37,12 @@
         </select>
       </div><br>
 
-      <button class="btn btn-success" (click)="submitForm(newName.value, newDefinition.value, newCategory.value, newSubject.value); newName.value=''; newDefinition.value=''; newCategory.value=''; newSubject.value='';">Add</button>
+      <button class="btn-cust" (click)="submitForm(newName.value, newDefinition.value, newCategory.value, newSubject.value); newName.value=''; newDefinition.value=''; newCategory.value=''; newSubject.value='';">ADD CARD</button>
     </div>
   </div>
 </div>
 <div class="flashcards">
-  <div *ngFor="let term of terms | async" class="flashcard panel panel-default">
+  <div *ngFor="let term of terms | async" class="flashcard panel">
     <div class="panel-body">
       <h2>{{term.subject}}</h2>
       <h3><em>{{term.name}}</em>, {{term.category}}</h3>
