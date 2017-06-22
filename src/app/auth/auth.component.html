@@ -2,17 +2,19 @@
 
 <div id="login" class="container">
   <h3 class="list-inline" *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!  </h3>
-  <div *ngIf="!(authService.user | async)">
-    <input type="text" [(ngModel)]="email" placeholder="email">
-    <input type="password" [(ngModel)]="password" placeholder="password">
+  <div class="loggin-in">
+    <div *ngIf="!(authService.user | async)">
+      <input class="form-control" type="text" [(ngModel)]="email" placeholder="email">
+      <input class="form-control" type="password" [(ngModel)]="password" placeholder="password">
 
-    <button (click)="signUp()" [disabled]="!email || !password">
-      Signup
-    </button>
+      <button class="btn btn-default list-inline space-left" (click)="signUp()" [disabled]="!email || !password">
+        Signup
+      </button>
 
-    <button (click)="logIn()" [disabled]="!email || !password">
-      Login
-    </button>
+      <button class="btn btn-default list-inline space-left" (click)="logIn()" [disabled]="!email || !password">
+        Login
+      </button>
+    </div>
   </div>
 
   <button class="btn btn-default list-inline space-left" (click)="logout()" *ngIf="authService.user | async">
