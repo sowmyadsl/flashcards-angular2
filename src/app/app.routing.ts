@@ -29,7 +29,7 @@ const appRoutes: Routes = [
     component: AuthComponent
   },
   {
-    path:'Edit',
+    path:'MyAccount',
     component: AuthComponent
   },
   {
