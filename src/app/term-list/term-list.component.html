@@ -1,44 +1,40 @@
-<h2>Terms List</h2>
 <div *ngIf="currentRoute === '/Terms'">
-  <button class="btn btn-primary outline" (click)="quizMeAll()">Quiz Me All</button>
+  <button class="btn btn-primary" (click)="quizMeAll()">Quiz Me All</button>
 </div>
 <div *ngIf="currentRoute != '/Terms'">
-  <button class="btn btn-primary outline" (click)="quizMe()">Quiz Me</button>
+  <button class="btn btn-primary" (click)="quizMe()">Quiz Me</button>
 </div>
-  <h2>Filter By Category:</h2>
-  <select class="form-control" (change)="onChange($event.target.value)">
-    <option value="fundamentals">Fundamentals</option>
-    <option value="concepts">Concepts</option>
-    <option value="framework">Frameworks</option>
-    <option value="databases">Databases</option>F
-    <option value="dependencies">Dependencies</option>
-    <option value="technicalInterview">Technical Interview</option>
-    <option value="allCategories" selected="selected">All Categories</option>
-  </select>
-  <br>
+<h2>Filter By Category:</h2>
+<select class="form-control" (change)="onChange($event.target.value)">
+  <option value="" disabled selected>Choose Category</option>
+  <option value="fundamentals">Fundamentals</option>
+  <option value="concepts">Concepts</option>
+  <option value="framework">Frameworks</option>
+  <option value="databases">Databases</option>F
+  <option value="dependencies">Dependencies</option>
+  <option value="technicalInterview">Technical Interview</option>
+</select>
+<br>
 
-  <div class="search-box">
-    <input type="text" name="search" placeholder="search by keywords" #Searchstring>
-    <button (click)="searchByTerm(Searchstring.value)">Search</button>
-  </div>
-  <br>
+<div class="search-box">
+  <input class="form-control" type="text" name="search" placeholder="search by keywords" #Searchstring>
+  <button class="btn btn-sm btn-default" (click)="searchByTerm(Searchstring.value)">Search</button>
+</div>
+<br>
 
-
-  <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords " class="panel panel-default">
-<div *ngIf="currentRoute != '/Terms'">
-  <div class="flashcards">
-    <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory" class="flashcard panel panel-default">
-      <div class="panel-body">
-        <h3><em>{{term.name}}</em></h3>
+<div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords" class="panel panel-default">
+  <div *ngIf="currentRoute != '/Terms'">
+    <div class="flashcards">
+      <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords" class="flashcard panel panel-default">
+        <app-term-panel [selectedTerm]="term"></app-term-panel>
       </div>
     </div>
   </div>
-</div>
-
-<div *ngIf="currentRoute === '/Terms'">
-  <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords" class="panel panel-default">
-    <div class="panel-body">
-      <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em></h3>
+  <div *ngIf="currentRoute === '/Terms'">
+    <div *ngFor="let term of terms | async | subject:filterBySubject | category:filterByCategory | search:filterByWords" class="panel panel-default">
+      <div class="panel-body">
+        <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em></h3>
+      </div>
     </div>
   </div>
 </div>

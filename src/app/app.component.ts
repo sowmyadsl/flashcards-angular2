@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, AfterViewInit } from '@angular/core';
+declare var $:any;
 
 
 @Component({
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Flashcards - app component';
+  title = 'Epiquiz';
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Term } from '../term.model';
@@ -6,7 +6,7 @@ import { TermService } from '../term.service';
 
 import { FirebaseObjectObservable, AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseListObservable } from 'angularfire2/database';
-
+declare var $:any;
 
 @Component({
   selector: 'app-term-detail',
@@ -23,7 +23,6 @@ export class TermDetailComponent implements OnInit {
   termToDisplay;
   firebaseArray = [];
   term;
-  showCard = true;
 
   constructor(
     private router: Router,
@@ -32,6 +31,14 @@ export class TermDetailComponent implements OnInit {
     private termService: TermService,
     private db: AngularFireDatabase
   ) {}
+
+  ngAfterViewInit(){
+    $('#flip').on('click', function(e) {
+    	e.preventDefault();
+
+    	$('#card').toggleClass('flipped');
+    });
+  }
 
   ngOnInit() {
     this.terms = this.termService.getTerms();
@@ -54,6 +61,10 @@ export class TermDetailComponent implements OnInit {
     });
   }
 
+  goBack() {
+    this.router.navigate([this.termSubject]);
+  }
+
   quizMe() {
     var termsArray = this.firebaseArray[Math.floor(Math.random() * this.firebaseArray.length)];
     var currentRouteSubject = this.currentRoute.split(/\W/).splice(1).shift();
@@ -71,4 +82,5 @@ export class TermDetailComponent implements OnInit {
     this.router.navigate([term.subject, term.$key]);
     location.reload();
   }
+
 }

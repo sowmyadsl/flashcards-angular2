@@ -1,20 +1,5 @@
 <h3>Admin login</h3>
-
-<!-- <div *ngIf="(authService.user | async) == null">
-  <input type="email" placeholder="Email" #email>
-  <input type="password" placeholder="Password" #password>
-  <button class="btn btn-success" (click)="signUp(email.value, password.value)">SignUp</button>
-  <button (click)="logIn(email.value, password.value)">LogIn</button>
-</div>
-
-
-<div class="logIn-message">
-  <span *ngIf="authService.user | async">Home</span>
-  <span *ngIf="(authService.user | async) == null"><em>please log in</em></span>
-  <strong>{{ (authService.user | async)?.email }}</strong> <a *ngIf="authService.user | async" class="red-logout" (click)="logout()">Logout</a>
-</div> -->
-
-
+<br>
 
 <div id="login" class="col-md-5" >
   <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
