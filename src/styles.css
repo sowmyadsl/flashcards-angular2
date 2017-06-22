@@ -1,6 +1,154 @@
+body {
+  background-color: #FFF7F7 !important;
+  font-family: 'Raleway' !important;
+}
+
+h1 {
+  font-family: Julius Sans One !important;
+  font-size: 100px !important;
+  text-align: center;
+  color: white !important;
+  text-shadow: 5px 4px 7px black;
+}
+
+.card-name  {
+  text-align: center;
+  transition: all .4s ease-in-out;
+}
+
+.card-name:hover  {
+  transform: scale(1.3);
+  color: #03446a;
+}
+
+.panel {
+  border: none;
+  background-color: #FFF7Fe;
+}
+
 .clickable {
   cursor: pointer;
 }
+
+.border {
+  border: 1px solid black;
+}
+
+.welcome {
+  /*transform: translate();*/
+  color: rgba(255,255,255,0.9);
+  font-size: 150px;
+  text-shadow: 1px 1px 5px grey;
+}
+
+.content {
+  height: 99vh;
+}
+
+/*SPLASH PAGE*/
+
+.subjects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  flex-basis: 30%;
+  outline: none;
+}
+
+.splash-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 250px;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px grey;
+  margin-top: 100px;
+}
+
+.ruby {
+  background-image: url('https://rebornix.gallerycdn.vsassets.io/extensions/rebornix/ruby/0.12.1/1493230640332/Microsoft.VisualStudio.Services.Icons.Default');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition:.5s;
+
+}
+
+.ruby:hover {
+  transform: rotate(5deg) scale(1.2);
+}
+
+.js {
+  background-image: url('http://logo-load.com/uploads/posts/2016-09/javascript-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:.5s;
+}
+
+.js:hover {
+  transform: rotate(5deg) scale(1.2);
+}
+
+.ember {
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/6/69/Ember.js_Logo_and_Mascot.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:.5s;
+}
+
+.ember:hover {
+  transform: rotate(5deg) scale(1.2);
+}
+
+.angular {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2000px-Angular_full_color_logo.svg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition:.5s;
+}
+
+.angular:hover {
+  transform: rotate(5deg) scale(1.2);
+}
+
+.jquery {
+  background-image: url('https://avatars0.githubusercontent.com/u/70142?v=3&s=400');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:.5s;
+}
+
+.jquery:hover {
+  transform: rotate(5deg) scale(1.2);
+}
+
+.rails {
+  background-image: url('http://clemldy.com/images/rails.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:.5s;
+}
+
+.rails:hover {
+  transform: rotate(5deg) scale(1.2);
+}
+
+
 
 /*PARENT DIV CARD LIST*/
 
@@ -14,6 +162,7 @@
 /*CHILD DIV CARD LIST*/
 
 .flashcard {
+  padding: 20px;
   flex-basis: 23%;
   min-height: 250px;
   min-width: 350px;
@@ -21,80 +170,6 @@
   margin: 8px;
   justify-content: center;
   align-items: center;
-}
-
-/*PARENT DIV CARD DETAIL*/
-
-.flash-detail-parent {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-/*CHILD DIV CARD DETAIL*/
-
-.flash-detail {
-  padding: 20px;
-  border: 1px solid rgba(125,126,126,0.5);
-  border-radius: 1em;
-  box-shadow: 1px 1px 10px grey;
-  flex-basis: 23%;
-  max-height: 450px;
-  min-height: 450px;
-  max-width: 300px;
-  min-width: 300px;
-  display: flex;
-  margin: 8px;
-  justify-content: center;
-  align-items: center;
-}
-
-.flash-detail:hover {
-  transition: background-color 0.3s ease,
-              box-shadow 0.3s ease;
-  background-color: #F7F9F9;
-  box-shadow: 1px 1px 5px black;
-}
-
-.arrow-left {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-
-  border-right: 50px solid #548587;
-}
-
-.arrow-left:hover {
-  transition: border-top 0.2s ease,
-              border-bottom 0.2s ease,
-              border-right 0.2s ease;
-
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-
-  border-right: 60px solid #2a6769;
-}
-
-.arrow-right {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-
-  border-left: 50px solid #915454;
-}
-
-.arrow-right:hover {
-  transition: border-top 0.2s ease,
-              border-bottom 0.2s ease,
-              border-right 0.2s ease;
-
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-
-  border-left: 60px solid #762a2a;
 }
 
 /*ABOUT PAGE*/

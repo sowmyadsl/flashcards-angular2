@@ -21,6 +21,7 @@ import { AuthComponent } from './auth/auth.component';
 import { CategoryPipe } from './category.pipe';
 import { SubjectPipe } from './subject.pipe';
 import { SearchPipe } from './search.pipe';
+import { TermPanelComponent } from './term-panel/term-panel.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     AuthComponent,
     CategoryPipe,
     SubjectPipe,
-    SearchPipe
+    SearchPipe,
+    TermPanelComponent
   ],
   imports: [
     BrowserModule,

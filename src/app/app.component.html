@@ -1,7 +1,7 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">Splash Page</a>
+      <a class="navbar-brand" routerLink="">Home Page</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><a routerLink="About">About</a></li>
@@ -12,6 +12,6 @@
 </nav>
 
 <div class="container">
-  <h1>{{title}}</h1>
+  <h1><a routerLink="">{{title}}</a></h1>
   <router-outlet></router-outlet>
 </div>

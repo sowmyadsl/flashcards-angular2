@@ -13,9 +13,6 @@ You can view the live site here {link coming soon}
 
 ### 1. Configuration/dependencies
   The app will primarily use Angular 4, the AngularCLI, Firebase database, and Typescript. It was made with what we learned from Epicodus' Javascript course.
-  <!-- Stretch goals include:
-    * Using Sass to style the page better.
-    * Hosting the site live -->
 
 ### 2. User Stories
   * As a user, I'd like to visit a page to see a list of all subjects.
@@ -62,7 +59,7 @@ As of writing this README, these instructions work on MacOS.
 
 * Run `$ git clone <this-repository-url>`
 * Then `$ cd flashcards`
-* Once in the flashcards folder, run `$ npm install`, `$bower init`(just press enter through the prompts), `$ bower install bootstrap --save`, and `$ bower install`
+* Once in the flashcards folder, run `$ npm install`, `$bower init`(just press enter through the prompts), `$ bower install bootstrap --save`, `$ bower install jquery --save`, and `$ bower install`
 * You will need to remake the api-keys.ts file. Login to firebase and create your own project here https://firebase.google.com/
   * Once logged in, click on 'Go To Console'.
   * Then click 'Add project', give it a name, and select your region.

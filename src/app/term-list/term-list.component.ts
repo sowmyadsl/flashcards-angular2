@@ -16,11 +16,12 @@ import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable }
 export class TermListComponent implements OnInit {
   terms: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  filterByCategory: string = "allCategories";
+  filterByCategory: string;
   filterBySubject: string;
   filterByWords: any[];
   termSubject: string;
   key;
+  showCard = false;
 
   constructor(
     private router: Router,
@@ -80,7 +81,7 @@ export class TermListComponent implements OnInit {
   }
 
   searchByTerm(searchString){
-    var searchWords = searchString.split(' ');
+    var searchWords = searchString.toLowerCase().split(' ');
     console.log(searchWords);
     this.filterByWords = searchWords;
   }

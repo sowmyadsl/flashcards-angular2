@@ -44,7 +44,8 @@
 <div class="flashcards">
   <div *ngFor="let term of terms | async" class="flashcard panel panel-default">
     <div class="panel-body">
-      <h3 (click)="goToDetailPage(term)"><em>{{term.name}}</em>, {{term.category}}</h3>
+      <h2>{{term.subject}}</h2>
+      <h3><em>{{term.name}}</em>, {{term.category}}</h3>
       <div>
         {{term.definition}}
         <hr>

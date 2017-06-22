@@ -1,13 +1,15 @@
-<h4><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h4>
-<div class="flash-detail-parent">
+<div class="arrow-flex">
   <div class="arrow-left clickable" (click)="goBack()"></div>
-  <div (click)="showCard = !showCard" class="clickable">
-    <div *ngIf="showCard" class="flash-detail">
-      <h3>{{termToDisplay?.name}}</h3>
-    </div>
-    <div *ngIf="showCard == false" class="flash-detail">
-      <h3>{{termToDisplay?.definition}}</h3>
-    </div>
-  </div>
+  <h2><span class="emphasis">{{termToDisplay?.subject}}</span> - {{termToDisplay?.category}}</h2>
   <div class="arrow-right clickable" (click)="quizMe()"></div>
+</div>
+<div class="flash-detail-parent">
+  <section class="detail-container">
+    <div class="clickable" id="flip">
+      <div id="card">
+        <figure class="front flash-detail"><h3>{{termToDisplay?.name}}</h3></figure>
+        <figure class="back flash-detail"><h3>{{termToDisplay?.definition}}</h3></figure>
+      </div>
+    </div>
+  </section>
 </div>

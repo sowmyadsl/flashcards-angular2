@@ -1,0 +1,109 @@
+/*PARENT DIV CARD DETAIL*/
+
+.flash-detail-parent {
+  margin-top: 50px;
+  /*margin-right: 50vw;
+  margin-left: 50vw;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*CHILD DIV CARD DETAIL*/
+
+.detail-container {
+  flex-basis: 70%;
+}
+
+.flash-detail {
+  padding: 20px;
+  border: 1px solid rgba(125,126,126,0.5);
+  border-radius: 1em;
+  box-shadow: 1px 1px 10px grey;
+  max-height: 600px;
+  min-height: 600px;
+  max-width: 400px;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flash-detail:hover {
+  transition: background-color 0.3s ease,
+              box-shadow 0.3s ease;
+  background-color: #F7F9F9;
+  box-shadow: 1px 1px 5px black;
+}
+
+.arrow-flex {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow-left {
+  margin: 0px 20px 0px 0px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 50px solid #03446a;
+  transition: all .2s ease-in-out;
+}
+
+.arrow-left:hover {
+  transform: scale(1.2);
+  border-right-color: #915454;
+}
+
+.arrow-right {
+  margin: 0px 0px 0px 60px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #03446a;
+  transition: all .2s ease-in-out;
+}
+
+.arrow-right:hover {
+  transform: scale(1.2);
+  border-left-color: #548587;
+}
+
+.detail-container {
+  position: relative;
+  perspective: 800px;
+}
+
+#card {
+  color: #03446A;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+#card .front {
+  background-color: white;
+}
+
+#card figure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#card .back {
+  background-color: #03446A;
+  color: white;
+  transform: rotateY( 180deg );
+}
+
+#card.flipped {
+  transform: rotateY( 180deg );
+}
