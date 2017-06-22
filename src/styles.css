@@ -21,7 +21,7 @@ h1 {
 }
 
 .btn-cust {
-  background: #FFF7F7;
+  background: #edf5f9;
   border: none;
   color: #3D5B94;
   font-size: 20px;
@@ -35,7 +35,7 @@ h1 {
 }
 
 .btn-cust:hover {
-  background: #FFF7F7;
+  background: #edf5f9;
   color:#3DACDD;
   font-style: oblique !important;
 }
@@ -201,3 +201,4 @@ h1 {
   margin: 8px;
   justify-content: center;
   align-items: center;
+}

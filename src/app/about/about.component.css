@@ -12,30 +12,26 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 15px;
+  margin: 20px;
+  margin-bottom: 35px;
 }
 
 .dev-pic {
   height: 200px;
   width: 200px;
   display: block;
-  border-top-left-radius: 20%;
-  border-bottom-left-radius: 20%;
+  border-radius: 20%;
+  /*border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;*/
 }
 
 .dev-info {
-  width: 300px;
+  width: 250px;
   height: 200px;
+  margin-top: 10px;
   text-align: center;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  border: 1px solid gray;
-  border-left: none;
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
-  margin-left: -1px;
 }
 
 .social {
@@ -43,6 +39,8 @@
 }
 
 .social a {
+  margin-left: 5px;
+  margin-right: 5px;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
@@ -59,10 +57,21 @@
 .social-img {
   width: 50px;
   height: 50px;
+  transition: .2s;
+}
+
+.social-img:hover {
+  transform: scale(1.1);
+  opacity: .5;
 }
 
 .about-project {
-  padding: 5em,
+  padding: 5em;
+  margin: 20px;
+}
+
+.about-project h3 {
+  text-align: center;
 }
 
 /*.github {
