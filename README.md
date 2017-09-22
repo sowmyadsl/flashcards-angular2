@@ -2,6 +2,8 @@
 
 ### Steven Galvin, Kat Gifford, Jin Camou, & Sowmya Dinavahi June 19th, 2017
 
+## LIVE LINK : (https://flashcards-55556.firebaseapp.com/)
+
 [![npm version](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://badge.fury.io/js/%40angular%2Fcore)
 
 
